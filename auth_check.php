@@ -11,4 +11,5 @@ if ($_SESSION['ip'] !== $_SERVER['REMOTE_ADDR']) {
     session_destroy();
     header("Location: login.html");
     exit;
+
 }
