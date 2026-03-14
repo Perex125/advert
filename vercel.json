@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "functions": {
+    "includes/**/*.php": {
+      "runtime": "vercel-php@0.6.0"
+    }
+  },
+  "routes": [
+    {
+      "src": "/includes/(.*)\\.php",
+      "dest": "/includes/$1.php"
+    }
+  ]
+}
