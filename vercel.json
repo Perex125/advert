@@ -3,7 +3,7 @@
   "builds": [
     {
       "src": "api/**/*.php",
-      "use": "@vercel/php"
+      "use": "vercel-php"
     }
   ],
   "routes": [
