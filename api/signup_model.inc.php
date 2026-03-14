@@ -23,7 +23,7 @@ function get_email(object $pdo, string $email) {
 }
 
 function set_user(object $pdo, string $username, string $email, string $pwd) {
-    $query = "INSERT INTO users (username, email, password) VALUES (:username, :email, :pwd);";
+    $query = "INSERT INTO users (username, email, pwd) VALUES (:username, :email, :pwd);";
     $stmt = $pdo->prepare($query);
 
     $options = [
