@@ -9,7 +9,7 @@
     <title>Atlantic Store</title>
 </head>
 <body>
-
+    <!-- This creates the loading screen you see before the page loads -->
     <div id="wifi-loader" style="display: flex;">
         <svg class="circle-outer" viewBox="0 0 86 86">
             <circle class="back" cx="43" cy="43" r="40"></circle>
@@ -28,6 +28,7 @@
 
     </div>
 
+    <!-- This is the navbar that holds the website name, About us, product and the contact link -->
     <div class="header">
         <nav class="navbar bg-dark border-bottom border-body navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
@@ -57,17 +58,19 @@
 
     </div>
 
+    <!-- This is the hero section that holds the welcome to atlantic store and the shop button  -->
     <div class="hero-section">
                     
         <div class="hero-content">
             <h1 class="hero-title">Welcome to Atlantic Store</h1>
             <p class="hero-description">Your one-stop shop for all your fashion needs.</p>
                 <button class="shop-btn">
-                    Shop Now 
+                    Shop Now
                 </button>
         </div>
     </div>
 
+    <!-- This are the list of product on the page -->
     <div class="product-section" id="Products">
         <h2>FEATURED PRODUCTS</h2>
         <div class="product-list">
@@ -127,10 +130,39 @@
                 <button class="btn btn-primary add-to-cart-btn">Add to cart</button>
             </div>
 
+            <div class="product-item">
+                <img src="images/pexels-beautinow-niche-perfume-413075804-15007553.jpg">
+                <h6>PETITE CHERIE</h6>
+                <p>$89.99</p>
+                <button class="btn btn-primary add-to-cart-btn">Add to cart</button>
+            </div>
+
+            <div class="product-item">
+                <img src="images/pexels-nediyodukenson-13875783.jpg">
+                <h6>FRATELLI DIAMANTI</h6>
+                <p>$90.99</p>
+                <button class="btn btn-primary add-to-cart-btn">Add to cart</button>
+            </div>
+
+            <div class="product-item">
+                <img src="images/pexels-valeriya-1961793.jpg">
+                <h6>JEANNE LANVIN</h6>
+                <p>$80.99</p>
+                <button class="btn btn-primary add-to-cart-btn">Add to cart</button>
+            </div>
+
+            <div class="product-item">
+                <img src="images/pexels-valeriya-1961791.jpg">
+                <h6>AQUA ALLEGORIA</h6>
+                <p>$60.99</p>
+                <button class="btn btn-primary add-to-cart-btn">Add to cart</button>
+            </div>
+
 
         </div>
     </div>
 
+    <!-- This are the about us section of the page -->
     <div class="about-us-section" id="About-Us">
         <div class="about-us-text"><h2>ABOUT US</h2>
             <p>At Atlantic Store, we are committed to providing our customers with the best shopping experience. We offer a wide range of products, from fashion to cosmetics, all at competitive prices. Our mission is to make shopping easy and enjoyable for everyone.</p>
@@ -140,13 +172,14 @@
         </div>
     </div>
 
+    <!-- This is the login screen that pops up when you try to add a product to the cart -->
     <div class="popup-login-page" id="popupLogin">
         <div class="popup-content">
             <span class="close-btn" id="closeBtn">&times;</span>
             <h2>Login</h2>
-            <form method="post" action="login.php">
-                <input type="text" placeholder="Username" required>
-                <input type="password" placeholder="Password" required>
+            <form method="POST" action="includes/login.inc.php">
+                <input type="text" name="username" placeholder="Username" required>
+                <input type="password" name="pwd" placeholder="Password" required>
                 <button type="submit" class="login-btn">Login</button>
                 <br>
                 <span class="require-signup">Don't have an account? <a id="signupLink">Sign Up</a></span>
@@ -154,15 +187,15 @@
         </div>
     </div>
 
+    <!-- This is the signup screen that pops up when you don't have login credentials -->
     <div class="popup-signup-page" id="popupSignup">
         <div class="popup-content">
             <span class="close-btn" id="closeBtn">&times;</span>
             <h2>Sign Up</h2>
-            <form method="post" action="signup.php">
-                <input type="text" placeholder="Full Name" required>
-                <input type="text" placeholder="Username" required>
-                <input type="email" placeholder="Email" required>
-                <input type="password" placeholder="Password" required>
+            <form method="POST" action="includes/signup.inc.php">
+                <input type="text" name="username" placeholder="Username" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="pwd" placeholder="Password" required>
                 <button type="submit" class="signup-btn">Sign Up</button>
                 <span class="require-signup">Already have an account? <a id="loginLink">Login</a></span>
             </form>
