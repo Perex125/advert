@@ -6,7 +6,7 @@
       "use": "vercel-php"
     },
     {
-      "src": "index.html",
+      "src": "**/*",
       "use": "@vercel/static"
     }
   ],
@@ -14,6 +14,10 @@
     {
       "src": "/api/(.*)",
       "dest": "/api/$1"
+    },
+    {
+      "src": "/(.*\\.(css|js|png|jpg|jpeg|svg|gif|ico|webp|ttf|woff|woff2))",
+      "dest": "/$1"
     },
     {
       "src": "/",
